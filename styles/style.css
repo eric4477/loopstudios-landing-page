@@ -1,3 +1,74 @@
+:root {
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+  --darkGray: hsl(0, 0%, 55%);
+  --veryDarkGray: hsl(0, 0%, 41%);
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* header */
+header {
+  height: 95vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.2)),
+    url("../images/desktop/image-hero.jpg") no-repeat;
+  background-size: cover;
+  background-position: center top;
+  font-family: "Alata", sans-serif;
+  font-weight: 400;
+}
+
+header nav {
+  padding: 45px 0;
+}
+
+header nav .container {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header nav .logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+header nav .container ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+header nav .container ul li {
+  padding: 0 14px;
+  font-size: 15px;
+}
+
+header nav .container ul li a {
+  color: var(--white);
+  position: relative;
+}
+
+header nav .container ul li a:hover::before {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 0.12rem;
+  bottom: -10px;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: var(--white);
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
@@ -5,4 +76,14 @@
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+/* utility classes */
+.container {
+  max-width: 1150px;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
 }
